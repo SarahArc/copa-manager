@@ -1,4 +1,3 @@
-from debbug import printar_elementos_in_list
 
 SEPARADOR = ';'
 

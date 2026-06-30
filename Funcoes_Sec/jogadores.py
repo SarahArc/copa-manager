@@ -1,7 +1,6 @@
 from rich.console import Console
 from rich.table import Table
 
-from debbug import printar_elementos_in_list
 from Utils.utils import ordenar_lista_asc_desc, filtrar_por_atributo_ou_sigla, filtrar_por_valor_do_atributo, formar_str_separada_por_virgula, trazer_id_por_nome, trazer_nome_selecao_por_id
 from Utils.utils_io import limpar_tela, obter_texto
 
