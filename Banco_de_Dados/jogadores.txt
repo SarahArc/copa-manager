@@ -1,0 +1,4 @@
+100;Vinicios Junior;1;Atacante;25;3
+101;Alisson;1;Goleiro;33;0
+102;Lionel Messi;3;Atacante;38;4
+103;Wataru Endou;6;Meio;32;1

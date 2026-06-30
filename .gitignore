@@ -1,0 +1,14 @@
+# Ignorar pastas de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar a pasta do ambiente virtual (caso ela esteja dentro da pasta do projeto)
+# Geralmente o Conda joga os ambientes para fora, mas se o seu estiver na pasta:
+.venv/
+env/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
