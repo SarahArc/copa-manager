@@ -1,6 +1,6 @@
-from Funcoes_Sec.persistencia import carregar_selecoes, salvar_selecoes, carregar_jogadores, salvar_jogadores, carregar_partidas, salvar_partidas
 from Utils.utils_io import limpar_tela, obter_opcao, obter_texto, obter_inteiro_positivo, sucesso, obter_inteiro_faixa, obter_atributos, obter_grupo
 
+from Funcoes_Sec.persistencia import carregar_selecoes, salvar_selecoes, carregar_jogadores, salvar_jogadores, carregar_partidas, salvar_partidas
 from Funcoes_Sec.selecoes import cadastrar_selecao, ordenar_selecao_asc_desc, filtrar_por_atributo_ou_sigla, listar_selecoes, buscar_selecao_por_nome
 from Funcoes_Sec.jogadores import cadastrar_jogador, obter_selecao, obter_posisicao, listar_jogadores, filtrar_jogadores, organizar_jogadores,  organizar_jogadores, listar_jogadores_filtrados, estatisticas#exibir_tabela_jogadores_bonita, exibir_tabela_jogadores_filtrados#, ordenar_jogadores_por_atributo, mostrar_jogadores_por_selecoes
 from Funcoes_Sec.partidas import cadastrar_partida, listar_partidas, listar_tab_class_grupo

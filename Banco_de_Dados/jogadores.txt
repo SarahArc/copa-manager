@@ -2,3 +2,4 @@
 101;Alisson;1;Goleiro;33;0
 102;Lionel Messi;3;Atacante;38;4
 103;Wataru Endou;6;Meio;32;1
+104;Kinlian Mbappe;5;Atacante;35;5

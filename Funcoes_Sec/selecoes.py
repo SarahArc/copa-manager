@@ -26,7 +26,8 @@ def criar_id(selecoes: list):
     for s in selecoes:
         ids_existentes.append(s['id'])
     if id in ids_existentes:
-        id += 1 
+        id += 1
+    return id
     
 
 # Mostrar Selecoes (Opcao 2) ====================================================================================
