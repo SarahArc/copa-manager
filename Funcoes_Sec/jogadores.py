@@ -15,8 +15,13 @@ def cadastrar_jogador(selecao: str, posicao: str, nome_do_jogador: str, idade: i
     jogadores.append(novo_jogador)
     return jogadores
 
-def criar_id_jogador(jogadores: list):
+def criar_id_jogador(jogadores: list):       
     id = 100 + len(jogadores)
+    ids_existentes = []
+    for j in jogadores:
+        ids_existentes.append(j['id'])
+    if id in ids_existentes:
+        id += 1 
     return id
 
 

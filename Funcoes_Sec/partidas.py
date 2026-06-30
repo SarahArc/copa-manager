@@ -22,6 +22,11 @@ def cadastrar_partida(selecao_da_casa: str, selecao_visitante: str,  gols_da_sel
 
 def criar_id_partida(partidas: list):
     id_partida = 500 + len(partidas)
+    ids_existentes = []
+    for p in partidas:
+        ids_existentes.append(p['id'])
+    if id_partida in ids_existentes:
+        id_partida += 1 
     return id_partida
 
 # Opcao 10 =======================================================================

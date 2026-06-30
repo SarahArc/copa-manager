@@ -2,13 +2,13 @@ from rich.console import Console
 from rich.table import Table
 
 from Utils.utils import filtrar_por_atributo_ou_sigla, ordenar_lista_asc_desc
-from Utils.utils_io import limpar_tela, obter_texto, obter_opcao, obter_atributos
+from Utils.utils_io import limpar_tela, obter_texto, obter_opcao
 
 console = Console()
 
 # Cadastrar Selecoes (Opcao 1) ====================================================================================
 def cadastrar_selecao(nome: str, confederacao: str, grupo: str, ranking_fifa: int, titulos: int, selecoes: list):
-    id = len(selecoes) + 1
+    id = criar_id(selecoes)
     nova_selecao = {
         'id': id,
         'nome': nome,
@@ -19,6 +19,15 @@ def cadastrar_selecao(nome: str, confederacao: str, grupo: str, ranking_fifa: in
         }
     selecoes.append(nova_selecao)
     return selecoes
+
+def criar_id(selecoes: list):
+    id = len(selecoes)
+    ids_existentes = []
+    for s in selecoes:
+        ids_existentes.append(s['id'])
+    if id in ids_existentes:
+        id += 1 
+    
 
 # Mostrar Selecoes (Opcao 2) ====================================================================================
 def listar_selecoes(titulo_da_tabela: str, registros: str):
@@ -48,7 +57,7 @@ def filtrar_selecao_por_nome(parte_do_nome: str, atributo, selecoes: list):
     selecoes_filtradas = filtrar_por_atributo_ou_sigla(parte_do_nome, atributo, selecoes)
     return selecoes_filtradas
 
-# Funcoes Genericas ===============================================================================
+# Funcoes para exibir tabelas ===============================================================================
 def exibir_tabela_selecoes_grupo(titulo_da_tabela: str, selecoes: list):
     if selecoes == None or selecoes == []:
         print(f'\n\t{titulo_da_tabela}\n\tAte o momento ainda nao ha selecoes cadastradas com este grupo ou confederacao.')

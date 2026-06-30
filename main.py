@@ -52,6 +52,7 @@ def main():
                 listar_selecoes(mensagem_titulo, selecoes_filtradas)
                 
                 continuar_buscando = obter_opcao('\n\tDeseja fazer uma nova busca? \n\t1 - Sim | 0 - Nao : ', 0, 1)
+                limpar_tela()
             limpar_tela()
 
         elif opcao == 5: #Opcao 5 ================================================================================
